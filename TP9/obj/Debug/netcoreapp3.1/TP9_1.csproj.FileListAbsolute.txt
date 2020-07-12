@@ -11,3 +11,16 @@ C:\Repogit\tp9\tpn9-AgustinF98\TP9_1\bin\Debug\netcoreapp3.1\TP9_1.pdb
 C:\Repogit\tp9\tpn9-AgustinF98\TP9_1\obj\Debug\netcoreapp3.1\TP9_1.dll
 C:\Repogit\tp9\tpn9-AgustinF98\TP9_1\obj\Debug\netcoreapp3.1\TP9_1.pdb
 C:\Repogit\tp9\tpn9-AgustinF98\TP9_1\obj\Debug\netcoreapp3.1\TP9_1.genruntimeconfig.cache
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\bin\Debug\netcoreapp3.1\TP9_1.exe
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\bin\Debug\netcoreapp3.1\TP9_1.deps.json
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\bin\Debug\netcoreapp3.1\TP9_1.runtimeconfig.json
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\bin\Debug\netcoreapp3.1\TP9_1.runtimeconfig.dev.json
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\bin\Debug\netcoreapp3.1\TP9_1.dll
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\bin\Debug\netcoreapp3.1\TP9_1.pdb
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.csprojAssemblyReference.cache
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.AssemblyInfoInputs.cache
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.AssemblyInfo.cs
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.csproj.CoreCompileInputs.cache
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.dll
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.pdb
+C:\Repogit\tp9\tpn9-AgustinF98\TP9\obj\Debug\netcoreapp3.1\TP9_1.genruntimeconfig.cache

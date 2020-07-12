@@ -10,7 +10,7 @@ namespace TP9_1
     {
         static void Main(string[] args)
         {
-            string Ruta = @"C:\Repogit\tp9\tpn9-AgustinF98\TP9";
+            /*string Ruta = @"C:\Repogit\tp9\tpn9-AgustinF98\TP9";
             
             List<string> ListadoArchivos;
 
@@ -41,22 +41,20 @@ namespace TP9_1
                     }
                     File.Move(archivos, Destino);
                 }
-            }
+            }*/
 
 
             //-------------- PUNTO 2 --------------
 
             string TextoMorse, TextoCastellano;
-            string carpetaMorse = Ruta + @"\Morse";
 
-            Console.WriteLine("Ingrese un texto para traducirla a codigo morse: ");
+            Console.Write("Ingrese un texto para traducirla a codigo morse: ");
             TextoCastellano = Console.ReadLine();
             TextoMorse = ConversorDeMorse.TextoAMorse(TextoCastellano);
+            ConversorDeMorse.GuardarEnArchivotxt(TextoMorse);
 
-            if (!Directory.Exists(carpetaMorse))
-            {
-                Directory.CreateDirectory(carpetaMorse);
-            }
+            TextoCastellano = ConversorDeMorse.LeerArchivotxt();
+            Console.Write("\nTraduccion de Morse a Texto: " + TextoCastellano);
         }
     }
 }

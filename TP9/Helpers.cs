@@ -32,28 +32,34 @@ namespace Helpers
     {
         public static Dictionary<string, string> ClavesMorse = new Dictionary<string, string>()
         {
-            {"A", ".-"}, {"B", "-..."}, {"C", "-.-."}, {"D", "-.."},
-            {"E", "."}, {"F", "..-."}, {"G", "--."}, {"H", "...."},
-            {"I", ".."}, {"J", ".---"}, {"K", "-.-"}, {"L", ".-.."},
-            {"M", "--"}, {"N", "-."}, {"O", "---"}, {"P", ".--."},
-            {"Q", "--.-"}, {"R", ".-."}, {"S", "..."}, {"T", "-"},
-            {"U", "..-"}, {"V", "...-"}, {"W", ".--"}, {"X", "-..-"},
-            {"Y", "-.--"}, {" ", "/"}, {"Z", "--.."}, {"1", ".----"}, {"2", "..---"},
-            {"3", "...--"}, {"4", "....-"}, {"5", "....."}, {"6", "-...."},
-            {"7", "--..."}, {"8", "---.."}, {"9", "----."}, {"0", "-----"},
+            {"a", ".- "}, {"b", "-... "}, {"c", "-.-. "}, {"d", "-.. "},
+            {"e", ". "}, {"f", "..-. "}, {"g", "--. "}, {"h", ".... "},
+            {"i", ".. "}, {"j", ".--- "}, {"k", "-.- "}, {"l", ".-.. "},
+            {"m", "-- "}, {"n", "-. "}, {"o", "--- "}, {"p", ".--. "},
+            {"q", "--.- "}, {"r", ".-. "}, {"s", "... "}, {"t", "- "},
+            {"u", "..- "}, {"v", "...- "}, {"w", ".-- "}, {"x", "-..- "},
+            {"y", "-.-- "}, {"z", "--.. "}, {" ", "/ "}, {"1", ".---- "}, {"2", "..--- "},
+            {"3", "...-- "}, {"4", "....- "}, {"5", "..... "}, {"6", "-.... "},
+            {"7", "--... "}, {"8", "---.. "}, {"9", "----. "}, {"0", "----- "}
         };
 
-        /*public static string MorseATexto(string TextoMorse)
+        public static string MorseATexto(string TextoMorse)
         {
-            string textoTraducido;
+            string textoTraducido = "";
+            string[] letraMorse = TextoMorse.Split(" ");
 
-            foreach(string caracter in TextoMorse)
+            foreach(string codigo in letraMorse)
             {
-
+                foreach (KeyValuePair<string, string> elemento in ClavesMorse)
+                {
+                    if (elemento.Value == codigo + " ")
+                    {
+                        textoTraducido = textoTraducido + elemento.Key;
+                    }
+                }
             }
-            
             return textoTraducido;
-        }*/
+        }
 
         public static string TextoAMorse(string TextoCastellano)
         {
@@ -61,16 +67,43 @@ namespace Helpers
 
             foreach (char caracter in TextoCastellano)
             {
-                foreach(KeyValuePair<string, string> valor in ClavesMorse)
+                foreach(KeyValuePair<string, string> elemento in ClavesMorse)
                 {
-                    if (valor.Key == caracter.ToString())
+                    if (elemento.Key == caracter.ToString())
                     {
-                        textoTraducido = valor.Value;
+                        textoTraducido = textoTraducido + elemento.Value;
                     }
                 }
             }
-
             return textoTraducido;
+        }
+
+        public static void GuardarEnArchivotxt(string TextoMorse)
+        {
+            string carpetaMorse = @"C:\Repogit\tp9\tpn9-AgustinF98\TP9\Morse";
+            string fecha = DateTime.Now.ToString("dd-MM-yy");
+            string Archivotxt = carpetaMorse + @"\morse_[" + fecha + "].txt";
+
+            if (!Directory.Exists(carpetaMorse))
+            {
+                Directory.CreateDirectory(carpetaMorse);
+            }
+            File.WriteAllText(Archivotxt, TextoMorse);
+        }
+
+        public static string LeerArchivotxt()
+        {
+            string carpetaMorse = @"C:\Repogit\tp9\tpn9-AgustinF98\TP9\Morse";
+            string fecha = DateTime.Now.ToString("dd-MM-yy");
+            string Archivotxt = carpetaMorse + @"\morse_[" + fecha + "].txt";
+
+            string Archivotxt2 = carpetaMorse + @"\texto_[" + fecha + "].txt";
+            string TextoEnMorse = File.ReadAllText(Archivotxt);
+            string TextoTraducido = MorseATexto(TextoEnMorse);
+
+            File.WriteAllText(Archivotxt2, TextoTraducido);
+
+            return TextoTraducido;
         }
     }
 }
